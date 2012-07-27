@@ -1,0 +1,6 @@
+<h1>Biografia</h1>
+<p>Nació en Bogotá. Estudió Bellas Artes en la Universidad Nacional de Colombia y, dibujo y grabado con el profesor Dioscórides Fernández. Trabajó como ilustrador científico en el museo de Ciencias y como dibujante botánico en el departamento de Biología, entidades adscritas a la Facultad de Ciencias de la Universidad Nacional de Colombia. Realizó trabajos para el Jardín Botánico, participó en proyectos como La Flora de Colombia, que recolecta y documenta especies de flora y fauna halladas desde la expedición botánica, además  ilustró proyectos antropológicos y arqueológicos bajo la dirección del profesor Gonzalo Correal.</p>
+<p>German no solo ha sido reconocido dentro de su labor como dibujante botánico e ilustrador, si no que también ha sido elogiado con varios premios nacionales alrededor de su vida netamente artística dentro de los cuales se encuentra el primer premio en el XI concurso Nacional de pintura entre otros (véase la sección “conmemoraciones”).</p>
+<p>Actualmente se encuentra pensionado, disfruta de su habilidad artistica, la compañía de sus 4 hijos y su esposa Yesmith.</p>
+<div align="center"><img src="imagenes/pinturas/pintura1.jpg" height="220px"></div>
+

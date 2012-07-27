@@ -1,0 +1,211 @@
+body	{
+		background-image:url("imagenes/Superficie-Gris106.jpg");
+		padding:0;	
+		overflow:none;
+}
+table,tr,td {
+		margin:0;
+		padding:0;
+}
+p,div {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		line-height: normal;
+		color: #7d7d7d;
+}
+h1 {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		line-height: normal;
+		font-weight: normal;
+		text-transform: capitalize;
+		color: #333333;
+}
+.imagen {
+		display:inline;
+}
+.contenedor {
+		position:relative;
+		left:0;
+		width:2400px;
+}
+.visor {
+		height:120px;
+		width:90%;
+		overflow:hidden;
+		display:none;
+		position:absolute;
+		left:5%;
+		top:30px;
+}
+div.galleryImage {
+		position:absolute;
+		top:5%;
+		left:5%;
+		width:90%;
+		height:90%;
+}
+div.galleryImage img{
+		position:absolute;
+}
+div.minigallery_goleft {
+	position:absolute;
+	left:0px;
+	top:26px;	
+	width:10%;
+	height:120px;
+}
+div.minigallery_goright {
+	position:absolute;
+	right:0px;
+	top:26px;	
+	width:10%;
+	height:120px;
+}
+div.minigallery_goright img, div.minigallery_goleft img {
+	position:relative;
+	top:35px;
+	margin:10px;
+	opacity:0.1;
+}
+div.topgallery {
+		position:absolute;
+		top:0px;
+		right:0px;
+}
+div.leftgallery {
+		position:absolute;
+		left:0px;
+		top:30%;
+		width:250px;
+		height:40%;
+}
+div.rightgallery {
+		position:absolute;
+		right:0px;
+		top:30%;
+		width:250px;
+		height:40%;
+}
+div.bottomgallery {
+		position:absolute;
+		bottom:0px;
+		width:100%;
+}
+div.rightgallery img , div.leftgallery img, div.topgallery img{
+		position:relative;
+		top:45%;
+		opacity:0.1;
+		margin:10px;
+}
+tr.miniaturasGaleria{
+		background-color:rgba(0,0,0,0.7);
+		height:130px;
+		display:none;
+}
+.maingallery {
+		float:left;
+		background-color:rgba(0,0,0,0.9);
+		padding:0px;
+		margin:0px;
+		position:absolute;
+		z-index:-1;
+		left:0px;
+		top:0px;
+		display:none;
+		height:100%;
+		width:100%;
+}
+#menuSuperior {
+		height:50px;
+		padding:0px;
+		margin:0px;
+		color: white;
+}
+#menuLateral {
+		float:left;
+                height:85%;
+		width:190px;
+		padding:15px;
+}
+#contenido {
+		float:left;
+                height:520px;
+		width:800px;
+		box-shadow:0px 0px 20px #727272;
+                background-color:white;
+		margin: 10px 0px;
+		padding:10px;
+		overflow:auto;
+}
+#contenido h1{
+		width:80%;
+		padding:0px 0px 10px 0px;
+		border-bottom:1px solid black;	
+}
+#topMenu {
+		list-style-type:none;
+		float:left;
+		margin:8px 0px 0px 0px;
+		padding:0;
+		}
+#topMenu li {
+		display:inline;
+		width:50px;
+		margin: 12px;
+}
+#topMenu li > a {
+		border-radius: 3px 3px 3px 3px;
+		color: #FFFFFF;
+		float: left;
+		line-height: 24px;
+		padding: 0px 8px;
+		text-decoration: none;
+		opacity:0.5;
+}
+#topMenu li > a:hover, #topMenu li > a.activo {
+		opacity:1.0;
+}
+#subMenu {
+		list-style-type:none;
+		float:left;
+		margin:10px 0px 0px 0px;
+		padding:0px;
+		}
+#subMenu li {
+		display:block;
+}
+#subMenu li > a {
+		border-radius: 3px 3px 3px 3px;
+		float: left;
+		width:180px;
+		line-height: 24px;
+		padding: 0 8px;
+		text-decoration: none;
+		opacity:0.5;
+}
+#subMenu li > a:hover, #subMenu li > a.activo {
+		opacity:1.0;
+}
+div.gallery {
+		overflow:auto;
+}
+div.imgContainer{
+		display:inline;
+		float:left;
+		height:90px;
+		width:150px;
+		margin:5px;
+		padding:0px;
+		background-color:#333333;
+		overflow:hidden;
+}
+div.imgContainer img{
+		width:300px;
+		height:auto;
+		position:relative;
+		top:-45px;
+		left:-75px;
+}	
