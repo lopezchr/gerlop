@@ -34,7 +34,7 @@
 	<div class="bottomgallery">
 		<table class="gallerymenu" width="100%" border="0">
 			<tr>
-				<td align="center"><img src="imagenes/gopanel.png" style="opacity:0.1"></td>
+				<td align="center"><a href="#"><img id="showImagesImg" src="imagenes/gopanel.png" style="opacity:0.1"></a></td>
 			</tr>
 			<tr class="miniaturasGaleria">
 				<td>

@@ -60,7 +60,7 @@ $(document).ready(function(){
 	});
 
 //funciones que para abrir y ocultar el panel de miniaturas en la galeria
-	$(document).on("mouseenter","table.gallerymenu",function(){
+	$(document).on("click","table.gallerymenu",function(){
 		$("tr.miniaturasGaleria").slideDown(500,function(){
 			$("tr.miniaturasGaleria td div").fadeIn(500);
 		});
@@ -71,6 +71,12 @@ $(document).ready(function(){
 		});
 	});
 //funcion que esconde los botones de la galeria
+	$(document).on("mouseenter","table.gallerymenu",function(){
+		$("#showImagesImg").fadeTo("slow",1.0);
+	});
+	$(document).on("mouseleave","table.gallerymenu",function(){
+		$("#showImagesImg").fadeTo("slow",0.1);
+	});
 	$(document).on("mouseenter","div.rightgallery",function(){
 		$("div.rightgallery img").fadeTo("slow",1.0);
 	});
@@ -89,18 +95,27 @@ $(document).ready(function(){
 	$(document).on("mouseleave","div.topgallery",function(){
 		$("div.topgallery img").fadeTo("slow",0.1);
 	});
-//funciones para mover el panel
-	$(document).on("mouseover","div.minigallery_goleft",function(){
-		$("div.contenedor").animate({left: "+=100%"},4000);
+	$(document).on("mouseenter","div.minigallery_goleft",function(){
+		$("div.minigallery_goleft img").fadeTo("slow",1.0);
+	});
+	$(document).on("mouseleave","div.minigallery_goleft",function(){
+		$("div.minigallery_goleft img").fadeTo("slow",0.1);
 	});
 	$(document).on("mouseenter","div.minigallery_goright",function(){
-		$("div.contenedor").animate({left: "-=100%"},4000);
+		$("div.minigallery_goright img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.minigallery_goleft , div.minigallery_goright",function(){
-		$("div.contenedor").stop();
+	$(document).on("mouseleave","div.minigallery_goright",function(){
+		$("div.minigallery_goright img").fadeTo("slow",0.1);
+	});
+//funciones para mover el panel
+	$(document).on("click","div.minigallery_goleft",function(){
+		$("div.contenedor").animate({left: "+=200"},500);
+	});
+	$(document).on("click","div.minigallery_goright",function(){
+		$("div.contenedor").animate({left: "-=200"},500);
 	});
 //funciones para pasar de imagen
-	$(document).on("click","div.leftgallery img",
+	$(document).on("click","div.leftgallery",
 		function(){
 			var idimg = $("#countImg").val();
 			idimg--;
@@ -113,7 +128,7 @@ $(document).ready(function(){
 			}
 		}
 	);
-	$(document).on("click","div.rightgallery img",
+	$(document).on("click","div.rightgallery",
 		function(){
 			var idimg = $("#countImg").val();
 			idimg++;
