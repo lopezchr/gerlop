@@ -53,8 +53,8 @@
 							}?>
 						</div>
 					</div>
-					<div class="minigallery_goleft"><img src="imagenes/flechaizquierda.png" style="float:left;"></div>
-					<div class="minigallery_goright"><img src="imagenes/flechaderecha.png" style="float:right;"></div>
+					<div class="minigallery_goleft"><a href="#"><img src="imagenes/flechaizquierda.png" style="float:left;"></a></div>
+					<div class="minigallery_goright"><a href="#"><img src="imagenes/flechaderecha.png" style="float:right;"></a></div>
 				</td>
 			</tr>
 		</table>
