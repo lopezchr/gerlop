@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
 	<title>GerLop.</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css" />
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>	
 	<script type="text/javascript" src="JS/my_jquery_functions.js"></script>
 	<script type="text/javascript" src="JS/menufunctionality.js"></script>
 </head>
@@ -26,6 +26,30 @@
 					<td><img src="imagenes/portada.jpg" height="400px"></td>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div class="maingallery">
+		<div class="galleryImage"></div>
+		<div class="topgallery"><a href="#"><img src="imagenes/iconocerrar.png" style="float:left;"></a></div>
+		<a href="#"><div class="leftgallery"><img src="imagenes/flechaizquierda.png" style="float:left;"></div></a>
+		<a href="#"><div class="rightgallery"><img src="imagenes/flechaderecha.png" style="float:right;"></div></a>
+		<div class="bottomgallery">
+			<table class="gallerymenu" width="100%" border="0">
+				<tr>
+					<td align="center"><a href="#"><img id="showImagesImg" src="imagenes/gopanel.png" style="opacity:0.1"></a></td>
+				</tr>
+				<tr class="miniaturasGaleria">
+					<td>
+						<div class="visor" width=100%>
+							<div class="contenedor" id="contMiniaturas">
+							</div>
+						</div>
+						<div class="minigallery_goleft"><a href="#"><img src="imagenes/flechaizquierda.png" style="float:left;"></a></div>
+						<div class="minigallery_goright"><a href="#"><img src="imagenes/flechaderecha.png" style="float:right;"></a></div>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 

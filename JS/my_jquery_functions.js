@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).on("ready", evento);
+function evento(ev){
 	$(document).load('ajax/config.php', function(data){
 		if(data){
 			arraypage=data;
@@ -17,6 +18,9 @@ $(document).ready(function(){
 			var url=$("img",this)[0].attributes[0].nodeValue;
 			$("div.maingallery").css({"z-index":100,"display":"inline"});
 			showimage(url);
+
+			var galeria = $("#galeria").html();
+			$("div#contMiniaturas").html(galeria);
 		}
 	);
 	function showimage(url){
@@ -142,4 +146,4 @@ $(document).ready(function(){
 			}
 		}
 	);
-});
+}
