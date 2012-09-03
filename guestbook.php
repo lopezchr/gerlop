@@ -26,6 +26,16 @@
 			$("#guestForm").each(function(){this.reset();});
 			getGuestBook();
 		});
+
+		$.post('ajax/mainContact.php', {from: 'system@chr-notification.com', about: 'Nuevo mensaje en Libro de Visitas.', menssage: from+' -> '+texto},function(data, stat){
+                        console.log(stat);
+                        if(data == "00"){
+                                console.log("El mensaje fue enviado correctamente.");
+                        }else{
+                                console.log("No fue posible enviar el mensaje. Intentelo mas tarde.");
+                        }
+                        
+                });
 	}
 
 	function getGuestBook(){

@@ -1,7 +1,7 @@
 <?php
 	$about = $_POST['about'];
 	$menssage = $_POST['menssage'];
-	$to = 'lopezchr@gmail.com';
+	$to = 'lopezchr@gmail.com,gerlop1951@gmail.com';
 	$header= 'From: '.$_POST['from']; 
 	$result= mail($to,$about,$menssage,$header);
 	if($result){
