@@ -25,3 +25,4 @@
 </div>
 
 <input type="hidden" id="countImg"/>
+<script type="text/javascript" src="js/galleryfunctionality.js"></script>

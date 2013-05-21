@@ -1,6 +1,5 @@
 $("div.imgContainer").on("click", function(){
 
-	console.log("entre");
 	//extraigo el contadorde la imagen
 	var imgcount = $("img",this)[0].parentNode.id.split("_")[1];
 	$("#countImg").val(imgcount);
