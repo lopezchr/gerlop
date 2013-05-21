@@ -14,7 +14,7 @@
 		$count=0;
 		foreach($imagenes as $img){?>
 			<a href="#">
-				<div id="imgGallery_<?=$count?>" class="imgContainer">
+				<div id="imgGallery_<?=$count?>" class="imgContainer" onClick="showimage('<?=$img?>')">
 					<img src=<?=$img?> />
 				</div>
 			</a>

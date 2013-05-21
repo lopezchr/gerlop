@@ -1,12 +1,13 @@
 $("div.imgContainer").on("click", function(){
-
+	console.log("entre");
+	/*
 	//extraigo el contadorde la imagen
 	var imgcount = $("img",this)[0].parentNode.id.split("_")[1];
 	$("#countImg").val(imgcount);
 	//rxtraigo la url de la imagen
 	var url=$("img",this)[0].attributes[0].nodeValue;
+	showimage(url);*/
 	$("div.maingallery").css({"z-index":100,"display":"inline"});
-	showimage(url);
 
 	var galeria = $("#galeria").html();
 	$("div#contMiniaturas").html(galeria);
@@ -108,27 +109,25 @@ $("div.minigallery_goright").on("click",function(){
 });
 //funciones para pasar de imagen
 $("div.leftgallery").on("click", function(){
-		var idimg = $("#countImg").val();
-		idimg--;
-		if(idimg >= 0){
-			var url= imgAry[idimg];
-			showimage(url);
-			$("#countImg").val(idimg);
-		}else{
-			console.log("no se puede")
-		}
+	var idimg = $("#countImg").val();
+	idimg--;
+	if(idimg >= 0){
+		var url= imgAry[idimg];
+		showimage(url);
+		$("#countImg").val(idimg);
+	}else{
+		console.log("no se puede")
 	}
-);
+});
 $("div.rightgallery").on("click", function(){
-		var idimg = $("#countImg").val();
-		idimg++;
-		if(idimg < imgAry.length){
-			var url= imgAry[idimg];
-			showimage(url);
-			$("#countImg").val(idimg);
-		
-		}else{
-			console.log("no se puede")
-		}
+	var idimg = $("#countImg").val();
+	idimg++;
+	if(idimg < imgAry.length){
+		var url= imgAry[idimg];
+		showimage(url);
+		$("#countImg").val(idimg);
+	
+	}else{
+		console.log("no se puede")
 	}
-);
+});
