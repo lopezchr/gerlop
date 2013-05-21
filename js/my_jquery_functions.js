@@ -3,26 +3,28 @@ function evento(ev){
 	$(document).load('ajax/config.php', function(data){
 		if(data){
 			arraypage=data;
+			//carga funcion en /js/menufunctionality
 			loadUserMenu();
 		}else{
 			goPage('errorPage.php?&mensaje="No fue posible cargar los menus"');
 		}
 	});
 
-	$(document).on("click","div.imgContainer",
-		function(){
-			//extraigo el contadorde la imagen
-			var imgcount = $("img",this)[0].parentNode.id.split("_")[1];
-			$("#countImg").val(imgcount);
-			//rxtraigo la url de la imagen
-			var url=$("img",this)[0].attributes[0].nodeValue;
-			$("div.maingallery").css({"z-index":100,"display":"inline"});
-			showimage(url);
+	$("div.imgContainer").on("click", function(){
 
-			var galeria = $("#galeria").html();
-			$("div#contMiniaturas").html(galeria);
-		}
-	);
+		console.log("entre");
+		//extraigo el contadorde la imagen
+		var imgcount = $("img",this)[0].parentNode.id.split("_")[1];
+		$("#countImg").val(imgcount);
+		//rxtraigo la url de la imagen
+		var url=$("img",this)[0].attributes[0].nodeValue;
+		$("div.maingallery").css({"z-index":100,"display":"inline"});
+		showimage(url);
+
+		var galeria = $("#galeria").html();
+		$("div#contMiniaturas").html(galeria);
+	});
+
 	function showimage(url){
 		$("div.galleryImage").html('<img src='+url+' style="float:left; display:;"/>');
 		var altoDiv= $("div.galleryImage")[0].clientHeight;
@@ -58,69 +60,67 @@ function evento(ev){
 		$("div.galleryImage img").css({"top":up+"%","left":left+"%"});
 	}
 
-	$(document).on("click","div.maingallery div.topgallery",
-		function(){
+	$("div.maingallery div.topgallery").on("click", function(){
 			$("div.maingallery").css({"z-index":-1,"display":"none"});
 	});
 
 //funciones que para abrir y ocultar el panel de miniaturas en la galeria
-	$(document).on("click","table.gallerymenu",function(){
+	$("table.gallerymenu").on("click",function(){
 		$("tr.miniaturasGaleria").slideDown(500,function(){
 			$("tr.miniaturasGaleria td div").fadeIn(500);
 		});
 	});
-	$(document).on("mouseleave","table.gallerymenu",function(){
+	$("table.gallerymenu").on("mouseleave",function(){
 		$("tr.miniaturasGaleria td div").fadeOut(500,function(){
 			$("tr.miniaturasGaleria").slideUp(500);
 		});
 	});
 //funcion que esconde los botones de la galeria
-	$(document).on("mouseenter","table.gallerymenu",function(){
+	$("table.gallerymenu").on("mouseenter",function(){
 		$("#showImagesImg").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","table.gallerymenu",function(){
+	$("table.gallerymenu").on("mouseleave",function(){
 		$("#showImagesImg").fadeTo("slow",0.1);
 	});
-	$(document).on("mouseenter","div.rightgallery",function(){
+	$("div.rightgallery").on("mouseenter",function(){
 		$("div.rightgallery img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.rightgallery",function(){
+	$("div.rightgallery").on("mouseleave",function(){
 		$("div.rightgallery img").fadeTo("slow",0.1);
 	});
-	$(document).on("mouseenter","div.leftgallery",function(){
+	$("div.leftgallery").on("mouseenter",function(){
 		$("div.leftgallery img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.leftgallery",function(){
+	$("div.leftgallery").on("mouseleave",function(){
 		$("div.leftgallery img").fadeTo("slow",0.1);
 	});
-	$(document).on("mouseenter","div.topgallery",function(){
+	$("div.topgallery").on("mouseenter",function(){
 		$("div.topgallery img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.topgallery",function(){
+	$("div.topgallery").on("mouseleave",function(){
 		$("div.topgallery img").fadeTo("slow",0.1);
 	});
-	$(document).on("mouseenter","div.minigallery_goleft",function(){
+	$("div.minigallery_goleft").on("mouseenter",function(){
 		$("div.minigallery_goleft img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.minigallery_goleft",function(){
+	$("div.minigallery_goleft").on("mouseleave",function(){
 		$("div.minigallery_goleft img").fadeTo("slow",0.1);
 	});
-	$(document).on("mouseenter","div.minigallery_goright",function(){
+	$("div.minigallery_goright").on("mouseenter",function(){
 		$("div.minigallery_goright img").fadeTo("slow",1.0);
 	});
-	$(document).on("mouseleave","div.minigallery_goright",function(){
+	$("div.minigallery_goright").on("mouseleave",function(){
 		$("div.minigallery_goright img").fadeTo("slow",0.1);
 	});
 //funciones para mover el panel
-	$(document).on("click","div.minigallery_goleft",function(){
+	$("div.minigallery_goleft").on("click",function(){
 		$("div.contenedor").animate({left: "+=200"},500);
 	});
-	$(document).on("click","div.minigallery_goright",function(){
+	$("div.minigallery_goright").on("click",function(){
 		$("div.contenedor").animate({left: "-=200"},500);
 	});
 //funciones para pasar de imagen
-	$(document).on("click","div.leftgallery",
-		function(){
+	$("div.leftgallery").on("click", function(){
 			var idimg = $("#countImg").val();
 			idimg--;
 			if(idimg >= 0){
@@ -132,8 +132,7 @@ function evento(ev){
 			}
 		}
 	);
-	$(document).on("click","div.rightgallery",
-		function(){
+	$("div.rightgallery").on("click", function(){
 			var idimg = $("#countImg").val();
 			idimg++;
 			if(idimg < imgAry.length){

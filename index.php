@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
 	<title>GerLop.</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css" />
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>	
-	<script type="text/javascript" src="JS/my_jquery_functions.js"></script>
-	<script type="text/javascript" src="JS/menufunctionality.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/my_jquery_functions.js"></script>
+	<script type="text/javascript" src="js/menufunctionality.js"></script>
 </head>
 <body>
 	<div id="menuSuperior"></div>
 
-	<div id=contenedor style="width:auto; margin-top:10px">
+	<div id="contenedor" style="width:auto; margin-top:10px">
 		<div id="menuLateral"></div>
 		<div id="contenido">
 			<div id="titulo"><h1>Luis German López Ojeda, de la ciencia al arte.</h1></div>

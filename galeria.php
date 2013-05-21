@@ -3,9 +3,7 @@
 	$imagenes=$galeriaPrincipal;
 	$long=count($imagenes)*170;
 ?>
-<script>
-	var imgAry = eval(<?=json_encode($imagenes)?>);
-</script>
+
 <div>
 	<div><h1>Galeria Principal</h1></div>
 	<div><p>Galeria de imagenes Principal</p></div>
@@ -23,5 +21,9 @@
 		}?>
 	</div>
 </div>
-
+<script>
+	var imgAry = eval(<?=json_encode($imagenes)?>);
+</script>
 <input type="hidden" id="countImg"/>
+<script type="text/javascript" src="js/galleryfunctionality.js"></script>
+
